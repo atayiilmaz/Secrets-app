@@ -57,6 +57,14 @@ app.get("/register", function (req, res) {
     res.render("register")
   })
 
+app.get("/secrets", function (req, res) {
+    if(req.isAuthenticated()){
+      res.render("secrets")
+    } else {
+      res.redirect("/login")
+    }
+  })
+
 app.post("/register", function (req, res) {
 /*
   bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
@@ -105,6 +113,28 @@ app.post("/login", function (req, res) {
       })
     })
     */
+
+    const user = new User({
+      username: req.body.username,
+      password: req.body.password
+    })
+
+    req.login(user, function (err) {
+      if(err){
+        console.log(err);
+      } else {
+        passport.authenticate("local")(req,res, function () {
+          res.redirect("/secrets")
+          })
+      }
+      })
+  })
+
+  app.get('/logout', function(req, res, next){
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    })
   })
 
 
