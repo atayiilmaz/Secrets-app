@@ -21,6 +21,7 @@ Go to the project directory
 
 ```bash
   cd secrets-app
+  cp .env.example .env
 ```
 
 Install dependencies
@@ -41,5 +42,8 @@ Also make sure that you have started the mongoDB server on localhost.
 Go to http://localhost:3000/ and you are ready to use.
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/atayiilmaz/Secrets-app/blob/main/public/img/Screenshot%202023-04-09%20145412.png)
+![App Screenshot](https://github.com/atayiilmaz/Secrets-app/blob/main/public/img/Screenshot%202023-04-09%20145433.png)
+![App Screenshot](https://github.com/atayiilmaz/Secrets-app/blob/main/public/img/Screenshot%202023-04-09%20145526.png)
+![App Screenshot](https://github.com/atayiilmaz/Secrets-app/blob/main/public/img/Screenshot%202023-04-09%20145543.png)
 
