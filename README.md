@@ -21,7 +21,7 @@ Go to the project directory
 
 ```bash
   cd secrets-app
-  cp .env.example .env
+  cp .env copy .env
 ```
 
 Install dependencies
@@ -33,7 +33,7 @@ Install dependencies
 Start the server
 
 ```bash
-  nodemon app.js
+  npm start
 ```
 
 Also make sure that you have started the mongoDB server on localhost.
